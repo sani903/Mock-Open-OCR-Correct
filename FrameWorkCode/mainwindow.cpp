@@ -2415,6 +2415,7 @@ void MainWindow::on_actionErrorDetectionRepUniq_triggered()
     rep <<"TotalSuggestionsWithLSTM =" << "sum(y3+y4+y5+y6+y7+y8+y9+y10+y11+y12)" << endl;
 }
 
+
 void MainWindow::on_actionSanskrit_triggered()
 {
     HinFlag = 0 , SanFlag = 1;
@@ -2428,4 +2429,34 @@ void MainWindow::on_actionHindi_triggered()
 void MainWindow::on_actionEnglish_triggered()
 {
     HinFlag = 0 , SanFlag = 0;
+}
+
+void MainWindow::on_actionBold_triggered(bool checked)
+{
+    checked ? ui->textBrowser->setFontWeight(QFont::Bold):
+              ui->textBrowser->setFontWeight(QFont::Normal);
+}
+
+void MainWindow::on_actionSuperScript_triggered(bool checked)
+{
+    QTextCharFormat format;
+    if(checked){
+        format.setVerticalAlignment(QTextCharFormat::AlignSuperScript);
+    }
+    else{
+        format.setVerticalAlignment(QTextCharFormat::AlignNormal);
+    }
+    ui->textBrowser->mergeCurrentCharFormat(format);
+}
+
+void MainWindow::on_actionSubScript_triggered(bool checked)
+{
+    QTextCharFormat format;
+    if(checked){
+        format.setVerticalAlignment(QTextCharFormat::AlignSubScript);
+    }
+    else{
+        format.setVerticalAlignment(QTextCharFormat::AlignNormal);
+    }
+    ui->textBrowser->mergeCurrentCharFormat(format);
 }

@@ -209,12 +209,21 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionHindi"/>
     <addaction name="actionEnglish"/>
    </widget>
+   <widget class="QMenu" name="menuFormat">
+    <property name="title">
+     <string>Format</string>
+    </property>
+    <addaction name="actionBold"/>
+    <addaction name="actionSuperScript"/>
+    <addaction name="actionSubScript"/>
+   </widget>
    <addaction name="menuSelectLanguage"/>
    <addaction name="menuOCR_Correction_Window"/>
    <addaction name="menuCreateReports"/>
    <addaction name="menuSaveVariables"/>
    <addaction name="menuConvertFiles"/>
    <addaction name="menuFeatureExtraction"/>
+   <addaction name="menuFormat"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -488,6 +497,30 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="toolTip">
     <string>English</string>
+   </property>
+  </action>
+  <action name="actionBold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Bold</string>
+   </property>
+  </action>
+  <action name="actionSuperScript">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>SuperScript</string>
+   </property>
+  </action>
+  <action name="actionSubScript">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>SubScript</string>
    </property>
   </action>
  </widget>
